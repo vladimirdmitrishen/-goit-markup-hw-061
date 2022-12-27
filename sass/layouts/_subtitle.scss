@@ -1,0 +1,32 @@
+.picture {
+  background: #F5F4FA;
+  border-radius: 4px;;
+  width: 270px;
+  height: 120px;
+  display: flex;
+ text-align: center;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 30px;
+
+}
+
+.section-title {
+  display: flex;
+  gap: 30px; 
+}
+.section-subtitle {
+  flex-basis: calc ((100% - 90px) / 4) ;
+} 
+
+.section-subtitle-lead {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1428;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.section-subtitle-text {
+  line-height: 1.7142;
+  color: var(--color-gray);
+}

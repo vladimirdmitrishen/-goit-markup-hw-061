@@ -1,0 +1,125 @@
+
+.images {
+  padding-top: 0px;
+}
+
+.images-item {
+display: block;
+max-width: 100%;
+height: auto;
+position: relative;
+}
+
+.images-text {
+  width: 370px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.images-text {
+  position: absolute;
+ bottom: -10%;
+  left: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transform: translate(-50%, -50%);
+
+}
+
+.images-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1666;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.images-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.team-subtitle {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.team-list {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+   0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+ 
+}
+
+.team-subject {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+}
+.team {
+  background: #F5F4FA;
+}
+
+.team-item {
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+  color: var(--color-gray);
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+.soc-item {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+ 
+}
+.soc-icon {
+  fill: currentColor;
+  transition: fill 250ms linear; 
+}
+.soc-icon:hover,
+.soc-icon:focus {
+fill: var(--color-white);
+}
+ .soc-list-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-lightgray);
+  transition: background-color 250ms linear;
+  
+}
+
+.soc-list-item:hover,
+.soc-list-item:focus {
+background-color: var(--color-blue);
+}
+.soc-list-item:hover .soc-icon {
+  fill: var(--color-white);
+}
+
+.our-team {
+  background-color: var(--color-white);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
