@@ -1,0 +1,38 @@
+.footer-address {
+    margin-bottom: 9px;
+   } 
+  .address-title {
+    list-style: none;
+    margin-top: 20px;
+  }
+      
+  .address-subtitle {
+    line-height: 1.7142;
+    text-decoration: none;
+    color: var(--color-white);
+    &:hover,
+    &:focus {
+    color: var(--color-blue);
+    }
+  }
+      
+  .address-mail {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.7142;
+    color: rgba(255, 255, 255, 0.6);
+  } 
+      
+  .address-list {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.7142;
+    color: rgba(255, 255, 255, 0.6);
+    &:focus {
+    }
+  }
+      
+  
+      
+  
+      

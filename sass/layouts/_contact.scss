@@ -1,40 +1,52 @@
-.mail-icon {
+.header__contact {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+ align-items: center;
+}
+
+.contact__mail {
+  color: var(--color-gray);
+  &:focus,
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+.contact__envelope {
     fill: currentColor;
     margin-right: 10px;
+    .mail:hover & {
+      fill:var(--color-blue) 
+    } 
+    &:hover,
+    &:focus {
+      fill: var(--color-blue);
+    }
+    
   }
-  .contact-icon {
+  .contact__smartphone {
     margin-left: 30px;
     margin-right: 10px;
+    .contact:hover & {
+      fill: var(--color-blue);
+    }
+    &:hover,
+    &:focus {
+    fill: var(--color-blue);  
+    }
   }
   
-  .contact {
+  .contact__phone {
     margin-left: 10px;
     color: var(--color-gray);
+    &:focus,
+    &:hover {
+      color: var(--color-blue);
+    }
   }
-  .mail:focus,
-  .mail:hover {
-    color: var(--color-blue);
-  }
+ 
   
-  .contact:focus,
-  .contact:hover {
-    color: var(--color-blue);
-  }
-  .contact:hover .contact-icon {
-    fill: var(--color-blue);
-  }
   
-  .mail-icon:hover,
-  .mail-icon:focus {
-    fill: var(--color-blue);
-  }
-  .contact-icon:hover,
-  .contact-icon:focus {
-    fill: var(--color-blue);  
-  }
-  .mail:hover .mail-icon {
-    fill:var(--color-blue) 
-  } 
   
   
   

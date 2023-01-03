@@ -24,20 +24,16 @@
   justify-content: center;
   background:rgba(255, 255, 255, 0.1);
   transition: background-color 250ms linear ;
+  &:hover,
+  &:focus {
+  background-color: var(--color-blue);
+  }
 }
     
 .footer-icon {
   fill: var(--color-white);
   transition: fill 250ms linear;
-}
-    
-.footer-list-item:hover,
-.footer-list-item:focus {
-background-color: var(--color-blue);
-}
-.footer-address {
- margin-bottom: 9px;
-}
+} 
 .footer-link {
   text-decoration: none;
   font-family: "Raleway";
@@ -46,49 +42,13 @@ background-color: var(--color-blue);
   line-height: 1.1923;
   color: var(--color-white)
 }
-    
-.address-title {
-  list-style: none;
-  margin-top: 20px;
-}
-    
-.address-subtitle {
-  line-height: 1.7142;
-  text-decoration: none;
-  color: var(--color-white)
-}
-    
-.address-mail {
-  text-decoration: none;
-  font-style: normal;
-  line-height: 1.7142;
-  color: rgba(255, 255, 255, 0.6);
-} 
-    
-.address-list {
-  text-decoration: none;
-  font-style: normal;
-  line-height: 1.7142;
-  color: rgba(255, 255, 255, 0.6);
-}
-    
-.address-subtitle:hover,
-.address-subtitle:focus {
-color: var(--color-blue);
-}
-    
-.address-list:focus {
-}
-    
+
 .footer-soc {
   margin-right: 93px;
 }
     
 .footer-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--color-white);
   display: block;
@@ -102,9 +62,7 @@ color: var(--color-blue);
 .footer-subtitle {
   margin-bottom: 20px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px; 
-  line-height: 1,1428; 
+  @include font(700, 14px, 1.1428, null);
   text-transform: uppercase;
   color: var(--color-white);
 }
@@ -120,6 +78,11 @@ color: var(--color-blue);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  &::placeholder {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+  }
 }
       
 .button-title {
@@ -128,13 +91,8 @@ color: var(--color-blue);
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
-}
-      
-.signup-input::placeholder {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-}
+}     
+
 .sign-icon {
   margin-left: 10px;
   fill: currentColor;
@@ -153,11 +111,8 @@ color: var(--color-blue);
   border: transparent;
         
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
+  @include font(700, 16px, 1.875, 0.06em);
   text-align: center;
-  letter-spacing: 0.06em;
   color:var(--color-white);
 }
 .address-subtitle {

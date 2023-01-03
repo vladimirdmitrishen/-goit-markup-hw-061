@@ -1,0 +1,41 @@
+.hero__images {
+    padding-top: 0px;
+  }
+  
+  .images__item {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  }
+  
+  .images__text {
+    width: 370px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  
+  .images__text {
+    position: absolute;
+   bottom: -10%;
+    left: 50%;
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-white);
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .images__title {
+    @include font(700, 36px, 1.1666, null);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .images__list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }

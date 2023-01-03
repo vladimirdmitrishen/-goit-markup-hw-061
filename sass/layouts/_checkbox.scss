@@ -30,14 +30,16 @@
   
     fill: transparent;
     background-color: transparent;
+    .modal-check:checked + & {
+      background-color: var(--color-blue);
+      border: none;
+      fill: #ffffff;
+    }
+    .modal-check:focus + & {
+      border-color: var(--color-blue);
+    }
   }
   
-  .modal-check:checked + .checkbox-label > span {
-    background-color: var(--color-blue);
-    border: none;
-    fill: #ffffff;
-  }
   
-  .modal-check:focus + .checkbox-label > span {
-    border-color: var(--color-blue);
-  }
+  
+ 

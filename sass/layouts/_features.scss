@@ -1,4 +1,4 @@
-.picture {
+.features__picture {
   background: #F5F4FA;
   border-radius: 4px;;
   width: 270px;
@@ -11,22 +11,20 @@
 
 }
 
-.section-title {
+.features__title {
   display: flex;
   gap: 30px; 
 }
-.section-subtitle {
-  flex-basis: calc ((100% - 90px) / 4) ;
+.features__subtitle {
+  flex-basis: calc((100% - 90px) / 4) ;
 } 
 
-.section-subtitle-lead {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.1428;
+.features__lead {
+  @include font(700, 14px, 1.1428, null);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.section-subtitle-text {
-  line-height: 1.7142;
+.features__text {
+  @include font(null, null, 1.7142, null);
   color: var(--color-gray);
 }

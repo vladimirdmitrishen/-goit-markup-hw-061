@@ -1,22 +1,23 @@
+
 @import './components/container';
+@import './utils/mixins';
 @import './utils/vars';
 @import './base/reset';
+@import './components/uptitle';
 
 @import './layouts/header';
-
 @import './layouts/hero';
-
-
-
-
 @import './layouts/contact';
-@import './layouts/subtitle';
+@import './layouts/features';
+@import './layouts/images';
 @import './layouts/teamsection';
 @import './layouts/client';
 
 @import './layouts/footer';
+@import './layouts/footer-address';
 @import './layouts/button';
 
 @import './layouts/work';
 @import './layouts/modal';
 @import './layouts/checkbox';
+

@@ -1,167 +1,152 @@
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms linear, visibility 250ms linear;
-  }
-  .modal {
-    width: 528px;
-    min-height: 581px;
-    background-color: var(--color-white);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px
-    rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   transform: translate(-50%, -50%) scale(1);
-   transition: transform 250ms linear;
-   padding: 40px;
-  }
-  .modal-title {
-    font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: var(--color-blak);
-  margin-bottom: 10px;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px
+  rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+  padding: 40px;
+}
+.modal-title {
+@include font(700, 20px, 1.15, null);
+text-align: center;
+color: var(--color-blak);
+margin-bottom: 10px;
+}
   
-  .modal-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding:12px 42px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding:12px 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--color-blue);
+    outline: var(--color-blue);
     }
+}
   
-  .modal-input:focus {
-  border-color: var(--color-blue);
-  outline: var(--color-blue);
-  }
-  .modal-field {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 10px;
-    font-size: 12px;
-    line-height: 1.1667;
-    letter-spacing: 0.01em;
-  }
-  .modal-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    fill: var(--color-blak);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal-field:focus-within>.modal-icon {
+  
+.modal-field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 10px;
+  @include font(null, 12px, 1.1667, 0.01em);
+  
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  fill: var(--color-blak);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-field:focus-within>& {
     fill: var(--color-blue);
   }
-  .modal-label-commet{
-    font-size: 12px;
-    line-height: 1.16px;
-    letter-spacing: 0.01em;
-  }
+}
+
+.modal-label-commet{
+  @include font(null, 12px, 1.16, 0.01em);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
   
-  .modal-comment {
-    margin-top: 4px;
-    width: 448px;
-    height: 120px;
-    resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding: 12px 16px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .modal-comment::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+.modal-comment {
+  margin-top: 4px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &::placeholder {
+    @include font(null, 12px, 1.16, 0.01em);  
     color: rgba(117, 117, 117, 0.5);
   }
-  .modal-comment:focus {
-    border-color: var(--color-blue);
-    
+ &:focus {
+  border-color: var(--color-blue);    
   }
-  .submit-button {
-    display: block;
-    min-width: 200px;
-    height: 50px;
-    margin: 0;
+}
   
-    background: var(--color-blue);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: transparent;
-  
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.875;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--color-white);
-    cursor: pointer;
-  }
-  .submit-button:hover, 
-  .submit-button:focus {
+.submit-button {
+  display: block;
+  min-width: 200px;
+  height: 50px;
+  margin: 0;
+  background: var(--color-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  font-family: inherit;
+  @include font(700, 16px, 1.875, 0.06em);
+  text-align: center;
+  color: var(--color-white);
+  cursor: pointer;
+  &:hover, 
+  &:focus {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+ }
+}
   
+.agrrement-link {
+  padding-left: 5px;
+  color: var(--color-blue);
+  text-decoration: underline;
+}
   
+.modal-label-commet {
+  position: absolute;
+  @include font(null, 12px, 1.16, 0.01em);
+  left: 0;
+}
+.checkbox-label {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.checkbox-link {
+  color: var(--color-blue);
+}
   
-  .agrrement-link {
-    padding-left: 5px;
-    color: var(--color-blue);
-    text-decoration: underline;
-  }
+.backdrop.is-hidden .modal {
+ transform: translate(-50%, -50%) scale(0);
+}
   
-  
-  
-  .modal-label-commet {
-    position: absolute;
-    font-size: 12px;
-    line-height: 1,16;
-    letter-spacing: 0.01em;
-    left: 0;
-  }
-  .checkbox-label {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  .checkbox-link {
-  
-    color: var(--color-blue);
-  }
-  
-  .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-  }
-  
-  .modal-close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

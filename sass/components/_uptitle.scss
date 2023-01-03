@@ -1,0 +1,5 @@
+.uptitle {  
+  font-style: normal;
+  @include font(500, null, 1.1428, 0.02em);
+  color: var(--color-blak)
+}
